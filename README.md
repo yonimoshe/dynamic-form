@@ -1,69 +1,77 @@
-# React + TypeScript + Vite
+# 📋 Dynamic Form – React + TypeScript App (Frontend-Focused)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Dynamic Form** is a frontend App project built from scratch.  
+The focus is **entirely on the frontend layer**:  
+✅ clean architecture,  
+✅ dynamic UI behavior,  
+✅ responsiveness,  
+✅ and user experience.
 
-Currently, two official plugins are available:
+The app communicates with a backend API, where the endpoint is defined via environment variables (`.env`).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🔧 Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🖥 Frontend (Focus)
+- React 19 + TypeScript
+- Vite 7
+- React Hook Form
+- Yup (schema validation)
+- @hookform/resolvers (React Hook Form + Yup integration)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 🛠 Development Tools
+- ESLint 9 + plugins (React Hooks, React Refresh)
+- TypeScript 5
+- Vite Plugin React
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+---
+
+## ✨ Features
+
+- 📄 Dynamic form rendering from configuration
+- ✅ Validation with Yup + React Hook Form
+- 🔒 Environment-based API endpoint (`.env`)
+- 📱 Responsive layout and clean design
+- 🧱 Reusable, typed components
+
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yonimoshe/dynamic-form.git
+cd dynamic-form
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Setup environment variables
+Create a `.env` file in the project root:
+```bash
+VITE_API_URL=<your-backend-endpoint>
 ```
+
+### 3. Start the app
+```bash
+npm install
+npm run dev
+# runs on http://localhost:5173
+```
+
+### 4. Build & Preview
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+
+## 👤 Author
+Developed by **Yoni Moshe**
+```
+
+---
